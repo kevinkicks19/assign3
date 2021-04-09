@@ -22,8 +22,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1">
+<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <VBox layoutX="10.0" layoutY="10.0" prefHeight="452.0" prefWidth="650.0">
          <children>
@@ -49,19 +48,19 @@
                               <ListView layoutX="251.0" layoutY="51.0" prefHeight="273.0" prefWidth="372.0" />
                               <VBox layoutX="33.0" layoutY="67.0" prefHeight="54.0" prefWidth="184.0">
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="Serial Number" />
-                                    <RadioButton mnemonicParsing="false" text="Name" />
-                                    <RadioButton mnemonicParsing="false" text="Type" />
+                                    <RadioButton fx:id="serialNumberButton" mnemonicParsing="false" onAction="#serialNumberButtonPressed" text="Serial Number" />
+                                    <RadioButton fx:id="nameRadioButton" mnemonicParsing="false" onAction="#nameRadioButtonPressed" text="Name" />
+                                    <RadioButton fx:id="typeRadioButton" mnemonicParsing="false" onAction="#typeRadioButtonPressed" text="Type" />
                                  </children>
                               </VBox>
                               <VBox layoutX="7.0" layoutY="142.0" prefHeight="130.0" prefWidth="236.0">
                                  <children>
                                     <Label prefHeight="25.0" prefWidth="261.0" text="Serial Number(SN) :" />
-                                    <TextField prefHeight="25.0" prefWidth="135.0" />
+                                    <TextField fx:id="serialNumberField1" prefHeight="25.0" prefWidth="135.0" />
                                     <Label text="Name :" />
-                                    <TextField />
+                                    <TextField fx:id="nameField1" />
                                     <Label text="Type :" />
-                                    <TextField prefHeight="3.0" prefWidth="236.0" />
+                                    <TextField fx:id="typeField1" prefHeight="3.0" prefWidth="236.0" />
                                  </children>
                               </VBox>
                               <Separator layoutX="25.0" layoutY="132.0" prefWidth="200.0" />
@@ -145,7 +144,7 @@
                                                 </VBox>
                                                 <VBox layoutX="129.0" prefHeight="310.0" prefWidth="121.0">
                                                    <children>
-                                                      <MenuButton mnemonicParsing="false" text="Pick Category">
+                                                      <MenuButton fx:id="categoryMenuButton" mnemonicParsing="false" onAction="#categoryMenuButtonChosen" text="Pick Category">
                                                          <items>
                                                             <MenuItem mnemonicParsing="false" text="Figure" />
                                                             <MenuItem mnemonicParsing="false" text="Animal" />
@@ -156,36 +155,41 @@
                                                             <Insets top="16.0" />
                                                          </VBox.margin>
                                                       </MenuButton>
-                                                      <TextField>
+                                                      <TextField fx:id="addToySN">
                                                          <VBox.margin>
                                                             <Insets right="5.0" top="7.0" />
                                                          </VBox.margin>
                                                       </TextField>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyName">
                                                          <VBox.margin>
                                                             <Insets right="5.0" top="5.0" />
                                                          </VBox.margin>
                                                       </TextField>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyBrand">
                                                          <VBox.margin>
                                                             <Insets right="5.0" top="5.0" />
                                                          </VBox.margin>
                                                       </TextField>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyPrice">
                                                          <VBox.margin>
                                                             <Insets right="5.0" top="5.0" />
                                                          </VBox.margin>
                                                       </TextField>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyAvailableCount">
                                                          <VBox.margin>
                                                             <Insets right="5.0" top="5.0" />
                                                          </VBox.margin>
                                                       </TextField>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyAppropriateAge">
                                                          <VBox.margin>
                                                             <Insets right="5.0" top="5.0" />
                                                          </VBox.margin>
                                                       </TextField>
+                                                      <Button fx:id="addToySaveButton" mnemonicParsing="false" onAction="#addToySaveButtonPressed" text="Save Toy">
+                                                         <VBox.margin>
+                                                            <Insets left="30.0" top="30.0" />
+                                                         </VBox.margin>
+                                                      </Button>
                                                    </children>
                                                 </VBox>
                                              </children>
@@ -205,7 +209,7 @@
                                                             <Insets left="10.0" top="33.0" />
                                                          </HBox.margin>
                                                       </Text>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyFigureClassification">
                                                          <HBox.margin>
                                                             <Insets left="15.0" right="8.0" top="30.0" />
                                                          </HBox.margin>
@@ -225,7 +229,7 @@
                                                             <Insets left="10.0" top="33.0" />
                                                          </HBox.margin>
                                                       </Text>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyPuzzleType">
                                                          <HBox.margin>
                                                             <Insets left="25.0" right="5.0" top="30.0" />
                                                          </HBox.margin>
@@ -249,7 +253,7 @@
                                                             <Insets left="10.0" top="9.0" />
                                                          </HBox.margin>
                                                       </Text>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyAnimalMaterial">
                                                          <HBox.margin>
                                                             <Insets left="8.0" right="8.0" top="5.0" />
                                                          </HBox.margin>
@@ -263,7 +267,7 @@
                                                             <Insets left="10.0" top="7.0" />
                                                          </HBox.margin>
                                                       </Text>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyAnimalSize" onAction="#addToyAnimalSizeEntered">
                                                          <HBox.margin>
                                                             <Insets left="60.0" right="10.0" top="5.0" />
                                                          </HBox.margin>
@@ -283,7 +287,7 @@
                                                             <Insets left="10.0" top="20.0" />
                                                          </HBox.margin>
                                                       </Text>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyBoardGameMin" onAction="#addToyBoardGameMinEntered">
                                                          <HBox.margin>
                                                             <Insets left="40.0" right="5.0" top="15.0" />
                                                          </HBox.margin>
@@ -297,7 +301,7 @@
                                                             <Insets left="10.0" top="8.0" />
                                                          </HBox.margin>
                                                       </Text>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyBoardGameMax" onAction="#addToyBoardGameMaxEntered">
                                                          <HBox.margin>
                                                             <Insets left="40.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
@@ -311,7 +315,7 @@
                                                             <Insets left="10.0" top="10.0" />
                                                          </HBox.margin>
                                                       </Text>
-                                                      <TextField>
+                                                      <TextField fx:id="addToyBoardGameDesigners" onAction="#addToyBoardGameDesignersEntered">
                                                          <HBox.margin>
                                                             <Insets right="5.0" top="6.0" />
                                                          </HBox.margin>
@@ -344,10 +348,10 @@
                                                 <Insets top="10.0" />
                                              </VBox.margin>
                                           </Text>
-                                          <TextField />
+                                          <TextField fx:id="removeToySN" onAction="#removeToySNEntered" />
                                        </children>
                                     </VBox>
-                                    <Button layoutX="62.0" layoutY="298.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="87.0" text="Remove" />
+                                    <Button fx:id="removeToyButton" layoutX="62.0" layoutY="298.0" mnemonicParsing="false" onAction="#removeToyButtonPressed" prefHeight="32.0" prefWidth="87.0" text="Remove" />
                                  </children>
                               </Pane>
                            </children>

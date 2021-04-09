@@ -12,10 +12,16 @@ public class myGUI {
 	public myGUI(Stage primaryStage){
 		try {
 			
-			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ToyStoreScene.fxml")); 
+			//Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ToyStoreScene.fxml")); 
+			FXMLLoader loader = new FXMLLoader();
+			Parent root = loader.load(getClass().getClassLoader().getResource("ToyStoreScene.fxml")); 
+			//loader.setController(root);
+			//loader.getController(mru.tsc.view.Controller);
 			Scene home = new Scene(root);
-			//home.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			//home.getStylesheets().add("application.css");
+			
+			//Controller cont = (Cont) chanceScene("ToyStoreScene.fxml");
+			home.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			home.getStylesheets().add("application.css");
 			primaryStage.setScene(home);
 			primaryStage.show();
 			
