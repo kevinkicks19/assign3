@@ -1,4 +1,4 @@
-package controller;
+package mru.tsc.controller;
 
 
 import mru.tsc.model.Toy;
@@ -6,8 +6,6 @@ import mru.tsc.view.Menu;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -36,14 +34,16 @@ public class ShopController {
 	 */
 	public ShopController() throws Exception {
 		toys = new ArrayList<Toy>();
-		Menu menu = new Menu();
 		
 		
 		loadData();
 		launchApp();
 	}
 	
-	
+	/**
+	 * Loads the toys.txt file into an arraylist
+	 * @throws Exception
+	 */
 	public void loadData() throws Exception {
 		File db = new File(FILE_PATH);
 		String currentLine;
@@ -58,7 +58,7 @@ public class ShopController {
 				
 				String SN = splittedLine[0];
 				if (SN.charAt(0) == '0' || SN.charAt(0) == '1') {
-					RetailItem i = new Figures(splittedLine[0], splittedLine[1], splittedLine[2], Double.parseDouble(splittedLine[3]), Integer.parseInt(splittedLine[4]), splittedLine[5], splittedLine[6].charAt(0));
+					Toy t = new Figures(splittedLine[0], splittedLine[1], splittedLine[2], Double.parseDouble(splittedLine[3]), Integer.parseInt(splittedLine[4]), splittedLine[5], splittedLine[6].charAt(0));
 					toys.add(t);
 					
 				} else if (SN.charAt(0) == '2' || SN.charAt(0) == '3') {
@@ -89,7 +89,7 @@ public class ShopController {
 	 */
 	public void findToy() {
 		
-		Toy findToy = null;
+		Toy findToy;
 		
 		int option = menu.searchMenu();
 		
@@ -193,7 +193,7 @@ public class ShopController {
 		
 			
 		case 4 :
-			//mainMenu();
+			menu.printMainMenu();
 			
 		default :
 			System.out.println("Not a valid answer, please enter a valid answer : ");
@@ -346,7 +346,11 @@ public class ShopController {
 	
 	
 	
-	
+
+	/**
+	 * Adds a new toy to the arraylist.
+	 * @throws Exception
+	 */
 	private void addNewToy() throws Exception {
 		
 		System.out.println("Enter a Toy Type:");
@@ -381,7 +385,7 @@ public class ShopController {
 			if (newToy.getPrice() < 0) {
 				throw new Exception();
 			}
-				
+
 			System.out.println("Enter Toy Price: ");
 			newToy.setPrice(kb.nextDouble());
 			
@@ -391,6 +395,9 @@ public class ShopController {
 			System.out.println("Enter Appropriate Age: ");
 			age = kb.nextInt();
 			newToy.setAge(age + "+");
+			
+			System.out.println("Enter Material: ");
+			newToy.setMaterial(kb.next());
 			
 			System.out.println("Enter Size: ");
 			newToy.setSize(kb.next().toUpperCase().charAt(0));
@@ -527,10 +534,16 @@ public class ShopController {
 		
 	}
 	
+
+	/**
+	 * Adds toys in arraylist to the toys.txt file.
+	 * @throws Exception
+	 */
 	public void saveData() throws Exception {
         FileWriter writer = new FileWriter(FILE_PATH);
         for (Toy t: toys) {
             writer.write(t.printFormat() + System.lineSeparator());
+
         }
         writer.close();
     }
