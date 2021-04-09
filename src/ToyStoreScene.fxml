@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="452.0" prefWidth="650.0">
+         <children>
+            <TabPane prefHeight="452.0" prefWidth="615.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="Home">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="735.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="27.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="717.0" AnchorPane.rightAnchor="0.0" />
+                              <Text fill="#fff600" layoutX="228.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Our Toy Story Company" />
+                              <Circle fill="#42ff1f" layoutX="209.0" layoutY="14.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff251f" height="15.0" layoutX="437.0" layoutY="7.0" stroke="BLACK" strokeType="INSIDE" width="17.0" />
+                              <TilePane layoutX="23.0" layoutY="37.0" prefHeight="27.0" prefWidth="139.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search Inventory :">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </TilePane>
+                              <ListView layoutX="251.0" layoutY="51.0" prefHeight="273.0" prefWidth="372.0" />
+                              <VBox layoutX="33.0" layoutY="67.0" prefHeight="54.0" prefWidth="184.0">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" text="Serial Number" />
+                                    <RadioButton mnemonicParsing="false" text="Name" />
+                                    <RadioButton mnemonicParsing="false" text="Type" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="7.0" layoutY="142.0" prefHeight="130.0" prefWidth="236.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="261.0" text="Serial Number(SN) :" />
+                                    <TextField prefHeight="25.0" prefWidth="135.0" />
+                                    <Label text="Name :" />
+                                    <TextField />
+                                    <Label text="Type :" />
+                                    <TextField prefHeight="3.0" prefWidth="236.0" />
+                                 </children>
+                              </VBox>
+                              <Separator layoutX="25.0" layoutY="132.0" prefWidth="200.0" />
+                              <Separator layoutX="25.0" layoutY="295.0" prefWidth="200.0" />
+                              <HBox layoutX="6.0" layoutY="320.0" prefHeight="77.0" prefWidth="242.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Search">
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Clear">
+                                       <HBox.margin>
+                                          <Insets left="40.0" right="30.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Button layoutX="398.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="BUY" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Add Toy">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="416.0" prefWidth="391.0">
+                           <children>
+                              <HBox layoutX="57.0" layoutY="123.0" prefHeight="422.2857142857143" prefWidth="650.2857142857143" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.25696804894629505" orientation="VERTICAL" prefHeight="200.0" prefWidth="250.0">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="215.0">
+                                             <children>
+                                                <Text layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter New Toy Information :">
+                                                   <font>
+                                                      <Font size="17.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                             <children>
+                                                <VBox prefHeight="305.0" prefWidth="130.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category :">
+                                                         <VBox.margin>
+                                                            <Insets left="15.0" right="15.0" top="20.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Serial Number (SN) :">
+                                                         <VBox.margin>
+                                                            <Insets left="15.0" top="15.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name :">
+                                                         <VBox.margin>
+                                                            <Insets left="15.0" top="13.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Brand :">
+                                                         <VBox.margin>
+                                                            <Insets left="15.0" top="12.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price :">
+                                                         <VBox.margin>
+                                                            <Insets left="15.0" top="15.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Available Count :">
+                                                         <VBox.margin>
+                                                            <Insets left="15.0" top="15.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Age Appropriate :">
+                                                         <VBox.margin>
+                                                            <Insets left="15.0" top="15.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="129.0" prefHeight="310.0" prefWidth="121.0">
+                                                   <children>
+                                                      <MenuButton mnemonicParsing="false" text="Pick Category">
+                                                         <items>
+                                                            <MenuItem mnemonicParsing="false" text="Figure" />
+                                                            <MenuItem mnemonicParsing="false" text="Animal" />
+                                                            <MenuItem mnemonicParsing="false" text="Puzzle" />
+                                                            <MenuItem mnemonicParsing="false" text="Board Game" />
+                                                         </items>
+                                                         <VBox.margin>
+                                                            <Insets top="16.0" />
+                                                         </VBox.margin>
+                                                      </MenuButton>
+                                                      <TextField>
+                                                         <VBox.margin>
+                                                            <Insets right="5.0" top="7.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField>
+                                                         <VBox.margin>
+                                                            <Insets right="5.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField>
+                                                         <VBox.margin>
+                                                            <Insets right="5.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField>
+                                                         <VBox.margin>
+                                                            <Insets right="5.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField>
+                                                         <VBox.margin>
+                                                            <Insets right="5.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField>
+                                                         <VBox.margin>
+                                                            <Insets right="5.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                    <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="216.0">
+                                             <children>
+                                                <Text layoutX="82.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Figure" />
+                                                <Separator layoutX="16.0" layoutY="58.0" prefHeight="3.0" prefWidth="165.0" />
+                                                <HBox layoutX="-1.0" layoutY="61.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Classification">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="33.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextField>
+                                                         <HBox.margin>
+                                                            <Insets left="15.0" right="8.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="216.0">
+                                             <children>
+                                                <Text layoutX="82.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Puzzle" />
+                                                <Separator layoutX="16.0" layoutY="58.0" prefHeight="3.0" prefWidth="165.0" />
+                                                <HBox layoutX="-1.0" layoutY="61.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="33.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextField>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" right="5.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                    <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="207.0" prefWidth="323.0">
+                                             <children>
+                                                <Text layoutX="81.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal" />
+                                                <Separator layoutX="14.0" layoutY="59.0" prefHeight="3.0" prefWidth="165.0" />
+                                                <HBox layoutX="-1.0" layoutY="86.0" prefHeight="35.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Material :">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="9.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextField>
+                                                         <HBox.margin>
+                                                            <Insets left="8.0" right="8.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="-1.0" layoutY="121.0" prefHeight="30.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Size :">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="7.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextField>
+                                                         <HBox.margin>
+                                                            <Insets left="60.0" right="10.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="216.0">
+                                             <children>
+                                                <Text layoutX="66.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board Game" />
+                                                <Separator layoutX="16.0" layoutY="58.0" prefHeight="3.0" prefWidth="165.0" />
+                                                <HBox layoutX="-1.0" layoutY="61.0" prefHeight="42.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Min # of Players" wrappingWidth="90.45954132080078">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextField>
+                                                         <HBox.margin>
+                                                            <Insets left="40.0" right="5.0" top="15.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="-1.0" layoutY="101.0" prefHeight="34.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Max # of Players" wrappingWidth="90.45954132080078">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="8.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextField>
+                                                         <HBox.margin>
+                                                            <Insets left="40.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="-1.0" layoutY="135.0" prefHeight="34.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Designers :" wrappingWidth="90.45954132080078">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextField>
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" top="6.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Remove Toy">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="79.0" layoutY="64.0" prefHeight="422.2857142857143" prefWidth="650.2857142857143" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ListView layoutX="244.0" layoutY="50.0" prefHeight="273.0" prefWidth="372.0" />
+                                    <Text layoutX="27.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Toy Serial Number(SN) :" />
+                                    <Separator layoutX="14.0" layoutY="117.0" prefWidth="200.0" />
+                                    <VBox layoutX="21.0" layoutY="151.0" prefHeight="67.0" prefWidth="163.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Serial Number(SN) :">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <Button layoutX="62.0" layoutY="298.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="87.0" text="Remove" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
